@@ -79,8 +79,10 @@ d：命中篮球个数
 
 
 ```
-    
-    胆拖奖金计算方法
+
+
+
+##  胆拖奖金计算方法
     
     e: 投注胆个数
     n： 投注拖个数
@@ -89,11 +91,10 @@ d：命中篮球个数
     s：命中拖个数
     o：命中蓝个数
     
-  
-
-```
-
-function DT(e, n, r, i, s, o) {
+    
+    ```
+    
+    function DT(e, n, r, i, s, o) {
     var u = s <= 6 - e ? s: 6 - e,
     a = new Array;
     for (var f = 0; f <= u; f++) a[f] = i + f;
@@ -136,7 +137,7 @@ function Rank(e, t) {
         return t == 1 ? 5 : -1
     }
 }
-
- 
-
-```
+    
+    
+    ```
+  
