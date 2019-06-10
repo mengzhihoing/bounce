@@ -7,8 +7,8 @@ b：篮球投注个数
 c：命中红球个数
 d：命中篮球个数
 
-```
 
+···
     function calFirst(a, b, c, d) {
         var A = new Number(a);
         var B = new Number(b);
@@ -75,8 +75,8 @@ d：命中篮球个数
         }
         return C;
     }
+   ··· 
     
-    ```
     
     胆拖奖金计算方法
     
@@ -87,7 +87,7 @@ d：命中篮球个数
     s：命中拖个数
     o：命中蓝个数
     
-    ```
+   ···
 function DT(e, n, r, i, s, o) {
     var u = s <= 6 - e ? s: 6 - e,
     a = new Array;
@@ -132,4 +132,4 @@ function Rank(e, t) {
     }
 }
 
-    ```
+   ···
