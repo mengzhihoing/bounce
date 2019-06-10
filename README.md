@@ -77,3 +77,59 @@ d：命中篮球个数
     }
     
     ```
+    
+    胆拖奖金计算方法
+    
+    e: 投注胆个数
+    n： 投注拖个数
+    r：投注蓝球个数
+    i：命中胆个数
+    s：命中拖个数
+    o：命中蓝个数
+    
+    ```
+function DT(e, n, r, i, s, o) {
+    var u = s <= 6 - e ? s: 6 - e,
+    a = new Array;
+    for (var f = 0; f <= u; f++) a[f] = i + f;
+    var l = [0, 0, 0, 0, 0, 0],
+    c = 0;
+    if (o == 1) for (var f = 0; f <= u; f++) c = Rank(a[f], 0),
+    c != -1 && (l[c] += Ccombo(n - s, 6 - e - f) * (r - 1) * Ccombo(s, f)),
+    c = Rank(a[f], 1),
+    l[c] += Ccombo(n - s, 6 - e - f) * Ccombo(s, f);
+    if (o == 0) for (var f = 0; f <= u; f++) c = Rank(a[f], 0),
+    c != -1 && (l[c] += Ccombo(n - s, 6 - e - f) * r * Ccombo(s, f));
+    return l
+}
+
+function Tank(e) {
+    return e == 0 ? 1 : Tank(e - 1) * e
+}
+
+function Ccombo(e, n) {
+    if (n <= e) {
+        var r = Tank(e - n) * Tank(n);
+        return r = Tank(e) / r,
+        r
+    }
+    return 0
+}
+
+function Rank(e, t) {
+    var n = e * 1 + t * 1;
+    switch (n) {
+    case 7:
+        return 0;
+    case 6:
+        return t == 1 ? 2 : 1;
+    case 5:
+        return 3;
+    case 4:
+        return 4;
+    default:
+        return t == 1 ? 5 : -1
+    }
+}
+
+    ```
