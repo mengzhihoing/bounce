@@ -8,7 +8,8 @@ c：命中红球个数
 d：命中篮球个数
 
 
-···
+```
+
     function calFirst(a, b, c, d) {
         var A = new Number(a);
         var B = new Number(b);
