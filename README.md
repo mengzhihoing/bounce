@@ -93,7 +93,7 @@ d：命中篮球个数
     o：命中蓝个数
     
     
-    ```
+   ```
     
     function DT(e, n, r, i, s, o) {
     var u = s <= 6 - e ? s: 6 - e,
@@ -139,6 +139,5 @@ function Rank(e, t) {
     }
 }
     
-    
-    ```
+```
   
